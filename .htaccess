@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /wp-content/uploads/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ {WP_Site_URL_Here}/wp-content/uploads/$1 [L,R=301,NE]
+</IfModule>
